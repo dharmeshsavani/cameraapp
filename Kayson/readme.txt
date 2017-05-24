@@ -22,3 +22,9 @@ For building the Setup project [Wix Toolset 3.10+](http://wixtoolset.org/) must 
 To build the full installer compile the Bootstrap32 or Bootstrap64 project
 If there is an error finding a merge module building the setup project then the merge modules are available in the Merge Modules directory
 
+
+
+
+
+
+Dharmesh added
