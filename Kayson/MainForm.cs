@@ -95,6 +95,7 @@ namespace iSpyApplication
         public static int RecordingThreads;
         public static List<String> Plugins = new List<String>();
         public static bool NeedsResourceUpdate;
+        public static Thread gps;
         private static readonly List<FilePreview> Masterfilelist = new List<FilePreview>();
 
         public static EncoderParameters EncoderParams;
@@ -6841,48 +6842,65 @@ namespace iSpyApplication
         public void ReadFromSerial()
         {
 
-            SerialPort mySerialPort = new SerialPort("COM4");
-            mySerialPort.BaudRate = 115200;
-            mySerialPort.Parity = Parity.None;
-            mySerialPort.StopBits = StopBits.One;
-            mySerialPort.DataBits = 8;
-            mySerialPort.Handshake = Handshake.None;
+            SerialPort mySerialPort = new SerialPort();
+          
 
 
             //  mySerialPort.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
-            mySerialPort.Open();
-            textbox("wait", "data reciving..");
-            string indata = mySerialPort.ReadExisting();
-            string text = String.Copy(indata);
-            string text1 = getBetween(text, "GPRMC", "E,");
-            string data = getBetween(text1, "A,", ",N");
-            string data1 = getBetween(text1, "N,", ",");
-            if (text1 == "")
+            try
             {
-                textbox("no data", "click agin");
-                return;
+                if (mySerialPort.IsOpen)
+                    mySerialPort.Close();
+                mySerialPort.BaudRate = 115200;
+                mySerialPort.Parity = Parity.None;
+                mySerialPort.StopBits = StopBits.One;
+                mySerialPort.DataBits = 8;
+                mySerialPort.PortName = "COM4";
+                mySerialPort.Open();
+                Thread.Sleep(1000);
+                bool count=true;
+                var i = 0;
+                while (i<=3)
+                {
+                    string indata = mySerialPort.ReadExisting();
+
+                    string text = String.Copy(indata);
+
+                    string text1 = getBetween(text, "GPRMC", "E,");
+                    string data = getBetween(text1, "A,", ",N");
+                    string data1 = getBetween(text1, "N,", ",");
+                    if (text1 != "")
+                        i++;
+                    //   count = false;
+                    else
+                        textbox(text1, text);
+     
+
+                    string f = String.Copy(data);
+                    string s = String.Copy(data1);
+                    string f1 = f.Substring(0, 2);
+                    string f2 = f.Substring(2, 7);
+                    string s1 = s.Substring(0, 3);
+                    string s2 = s.Substring(3, 7);
+
+                    decimal d = 0, d1 = 0, d3 = 0;
+                    d = Convert.ToDecimal(f1);
+                    d1 = Convert.ToDecimal(f2);
+                    d3 = d + (d1 / 60);
+
+
+                    decimal d4 = 0, d5 = 0, d6 = 0;
+                    d4 = Convert.ToDecimal(s1);
+                    d5 = Convert.ToDecimal(s2);
+                    d6 = d4 + (d5 / 60);
+                    textbox(d3.ToString(), d6.ToString());
+                }
             }
-
-            string f = String.Copy(data);
-            string s = String.Copy(data1);
-            string f1 = f.Substring(0, 2);
-            string f2 = f.Substring(2, 7);
-            string s1 = s.Substring(0, 3);
-            string s2 = s.Substring(3, 7);
-
-            decimal d = 0, d1 = 0, d3 = 0;
-            d = Convert.ToDecimal(f1);
-            d1 = Convert.ToDecimal(f2);
-            d3 = d + (d1 / 60);
-
-
-            decimal d4 = 0, d5 = 0, d6 = 0;
-            d4 = Convert.ToDecimal(s1);
-            d5 = Convert.ToDecimal(s2);
-            d6 = d4 + (d5 / 60);
-            textbox(d3.ToString(), d6.ToString());
-
-            mySerialPort.Close();
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                mySerialPort.Close();
+            }
         }
         public string getBetween(string strSource, string strStart, string strEnd)
         {
@@ -6958,7 +6976,10 @@ namespace iSpyApplication
         }
         private void menuItem32_Click(object sender, EventArgs e)
         {
-            ReadFromSerial();
+          
+
+            gps=new Thread (ReadFromSerial);
+            gps.Start();
            // ManageGridViews();
         }
 
