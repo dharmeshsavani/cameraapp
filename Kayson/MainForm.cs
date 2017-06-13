@@ -5334,7 +5334,7 @@ namespace iSpyApplication
             this._menuItem5,
             this._menuItem27,
             this._menuItem26});
-            this._helpItem.Text = "&Help";
+           // this._helpItem.Text = "&Help";
             // 
             // _aboutHelpItem
             /*
