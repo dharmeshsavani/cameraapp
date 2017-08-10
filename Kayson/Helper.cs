@@ -252,7 +252,7 @@ namespace iSpyApplication
         {
             string ttl = $"Kayson v{Application.ProductVersion}";
             if (Program.Platform != "x86")
-                ttl = $"Kayson v.jun2017 ";
+                ttl = $"Kayson LCVR";
               //  ttl = $"Kayson 64 v{Application.ProductVersion}";
 
             if (MainForm.Conf.WSUsername != "")
