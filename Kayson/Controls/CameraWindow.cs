@@ -239,7 +239,7 @@ namespace iSpyApplication.Controls
                     mySerialPort.Parity = Parity.None;
                     mySerialPort.StopBits = StopBits.One;
                     mySerialPort.DataBits = 8;
-                    mySerialPort.PortName = "COM3";   //PortName
+                    mySerialPort.PortName = "COM4";   //PortName
                     mySerialPort.Open();
                 var cam = 0;
                 while (cam<=2)
