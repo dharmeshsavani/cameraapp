@@ -6491,7 +6491,7 @@ namespace iSpyApplication
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.MinimumSize = new System.Drawing.Size(50, 50);
+            this.MinimumSize = new System.Drawing.Size(100, 100);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Kayson";
@@ -6860,7 +6860,7 @@ namespace iSpyApplication
                 Thread.Sleep(1000);
                 bool count=true;
                 var i = 0;
-                while (i<=3)
+           //     while (true)
                 {
                     string indata = mySerialPort.ReadExisting();
 
