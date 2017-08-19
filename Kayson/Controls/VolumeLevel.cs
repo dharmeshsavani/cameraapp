@@ -94,7 +94,7 @@ namespace iSpyApplication.Controls
         private WaveFormat _audioStreamFormat;
         private LameMP3FileWriter _mp3Writer;
         private readonly MemoryStream _outStream = new MemoryStream();
-        private readonly byte[] _bResampled = new byte[65532];//new byte[22050];
+        private readonly byte[] _bResampled = new byte[65536];//new byte[22050];
 
         private const int ButtonCount = 5;
         private Rectangle ButtonPanel
@@ -2230,7 +2230,7 @@ namespace iSpyApplication.Controls
             Alarm(sender, EventArgs.Empty);
         }
 
-        public static WaveFormat AudioStreamFormat = new WaveFormat(65000, 16, 1);
+        public static WaveFormat AudioStreamFormat = new WaveFormat(65536, 16, 1);
 
         public void AudioDeviceDataAvailable(object sender, DataAvailableEventArgs e)
         {
@@ -2242,7 +2242,7 @@ namespace iSpyApplication.Controls
             {
                 using (var helpStm = new WaveFormatConversionStream(AudioStreamFormat, ws))
                 {
-                    totBytes = helpStm.Read(_bResampled, 0, 65000);//65000 ..22050
+                    totBytes = helpStm.Read(_bResampled, 0, 65536);//65000 ..22050
                    
                 }
             }
