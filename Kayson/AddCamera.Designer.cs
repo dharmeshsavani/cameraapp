@@ -476,10 +476,10 @@ namespace iSpyApplication
             this.tcCamera.Controls.Add(this.tabPage3);
             this.tcCamera.Controls.Add(this.tabPage2);
             this.tcCamera.Controls.Add(this.tabPage4);
-            this.tcCamera.Controls.Add(this.tabPage8);
+         //   this.tcCamera.Controls.Add(this.tabPage8);
             this.tcCamera.Controls.Add(this.tabPage10);
-            this.tcCamera.Controls.Add(this.tabPage7);
-            this.tcCamera.Controls.Add(this.tabPage9);
+         //   this.tcCamera.Controls.Add(this.tabPage7);
+        //    this.tcCamera.Controls.Add(this.tabPage9);
             this.tcCamera.Controls.Add(this.tabPage5);
             this.tcCamera.Controls.Add(this.tabPage6);
             this.tcCamera.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2717,7 +2717,7 @@ namespace iSpyApplication
             this.tabPage10.Location = new System.Drawing.Point(4, 25);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Size = new System.Drawing.Size(649, 625);
-            this.tabPage10.TabIndex = 10;
+            this.tabPage10.TabIndex = 4;
             this.tabPage10.Text = "Images";
             this.tabPage10.UseVisualStyleBackColor = true;
             // 
@@ -3812,7 +3812,7 @@ namespace iSpyApplication
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(6);
             this.tabPage5.Size = new System.Drawing.Size(649, 625);
-            this.tabPage5.TabIndex = 4;
+            this.tabPage5.TabIndex = 5;
             this.tabPage5.Text = "Scheduling";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
@@ -3891,7 +3891,7 @@ namespace iSpyApplication
             this.tabPage6.Location = new System.Drawing.Point(4, 25);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(649, 625);
-            this.tabPage6.TabIndex = 9;
+            this.tabPage6.TabIndex = 6;
             this.tabPage6.Text = "Storage";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
