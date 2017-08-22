@@ -193,7 +193,7 @@ namespace iSpyApplication
         private MenuItem menuItem38;
         private MenuItem menuItem39;
         private MenuItem menuItem40;
-        private ToolStripMenuItem openWebInterfaceToolStripMenuItem;
+   //     private ToolStripMenuItem openWebInterfaceToolStripMenuItem;
         
 
         public static void AddObject(object o)
@@ -276,7 +276,7 @@ namespace iSpyApplication
         private ToolStripMenuItem _listenToolStripMenuItem;
         private ToolStripMenuItem _localCameraToolStripMenuItem;
         private PersistWindowState _mWindowState;
-        private MenuItem _menuItem1;
+    //    private MenuItem _menuItem1;
         private MenuItem _menuItem10;
         private MenuItem _menuItem12;
         private MenuItem _menuItem13;
@@ -285,10 +285,10 @@ namespace iSpyApplication
         private MenuItem _menuItem16;
         private MenuItem _menuItem17;
         private MenuItem _menuItem18;
-        private MenuItem _menuItem19;
+  //      private MenuItem _menuItem19;
         private MenuItem _menuItem2;
         private MenuItem _menuItem20;
-        private MenuItem _menuItem21;
+   //     private MenuItem _menuItem21;
         private MenuItem _menuItem22;
         private MenuItem _menuItem23;
         private MenuItem _menuItem24;
@@ -357,7 +357,7 @@ namespace iSpyApplication
         private ToolStripMenuItem _unlockToolstripMenuItem;
         private Thread _updateChecker;
         private Timer _updateTimer;
-        private ToolStripMenuItem _viewMediaOnAMobileDeviceToolStripMenuItem;
+  //      private ToolStripMenuItem _viewMediaOnAMobileDeviceToolStripMenuItem;
         private ToolStripMenuItem _websiteToolstripMenuItem;
         private ToolStripMenuItem alwaysOnTopToolStripMenuItem1;
         private ToolStripMenuItem autoLayoutToolStripMenuItem;
@@ -386,7 +386,7 @@ namespace iSpyApplication
         private MenuItem menuItem10;
         private MenuItem menuItem11;
         private MenuItem menuItem12;
-        private MenuItem menuItem13;
+  //      private MenuItem menuItem13;
         private MenuItem menuItem14;
         private MenuItem menuItem15;
         private MenuItem menuItem16;
@@ -470,7 +470,7 @@ namespace iSpyApplication
         private ToolStripStatusLabel tsslPRO;
         private MenuItem menuItem34;
         private MenuItem menuItem35;
-        private MenuItem menuItem36;
+    //    private MenuItem menuItem36;
         private ToolStripMenuItem websiteToolStripMenuItem;
 
         public MainForm(bool silent, string command)
@@ -1563,17 +1563,17 @@ namespace iSpyApplication
             //_menuItem24.Text = LocRm.GetString("ShowGettingStarted");
             _listenToolStripMenuItem.Text = LocRm.GetString("Listen");
             _localCameraToolStripMenuItem.Text = LocRm.GetString("LocalCamera");
-            _menuItem1.Text = "-";
+            //_menuItem1.Text = "-";
            // _menuItem10.Text = LocRm.GetString("checkForUpdates");
             _menuItem13.Text = "-";
             _menuItem15.Text = LocRm.GetString("ResetAllRecordingCounters");
             _menuItem16.Text = LocRm.GetString("View");
             _menuItem17.Text = inExplorerToolStripMenuItem.Text = LocRm.GetString("files");
             _menuItem18.Text = LocRm.GetString("clearCaptureDirectories");
-            _menuItem19.Text = LocRm.GetString("saveObjectList");
+            //_menuItem19.Text = LocRm.GetString("saveObjectList");
             //_menuItem2.Text = LocRm.GetString("help");
             _menuItem20.Text = viewLogFileToolStripMenuItem.Text = LocRm.GetString("Logfile");
-            _menuItem21.Text = LocRm.GetString("openObjectList");
+            //_menuItem21.Text = LocRm.GetString("openObjectList");
             _menuItem22.Text = LocRm.GetString("LogFiles");
             _menuItem23.Text = LocRm.GetString("audiofiles");
          //   _menuItem25.Text = LocRm.GetString("MediaOnAMobiledeviceiphon");
@@ -1690,13 +1690,13 @@ namespace iSpyApplication
             _toolStripButton8.Visible =
                 _remoteCommandsToolStripMenuItem.Visible =
                     _menuItem35.Visible = (Helper.HasFeature(Enums.Features.Remote_Commands));
-            _toolStripButton1.Visible =
-                _viewMediaToolStripMenuItem.Visible =
-                    _menuItem3.Visible =
-                        _viewMediaOnAMobileDeviceToolStripMenuItem.Visible =
-                            _menuItem25.Visible = _menuItem4.Visible = (Helper.HasFeature(Enums.Features.Web_Settings));
+        //    _toolStripButton1.Visible =
+       //         _viewMediaToolStripMenuItem.Visible =
+       //             _menuItem3.Visible =
+                     //   _viewMediaOnAMobileDeviceToolStripMenuItem.Visible =
+                      //      _menuItem25.Visible = _menuItem4.Visible = (Helper.HasFeature(Enums.Features.Web_Settings));
             menuItem18.Visible = (Helper.HasFeature(Enums.Features.PTZ));
-            tsbPlugins.Visible = (Helper.HasFeature(Enums.Features.Plugins));
+      //      tsbPlugins.Visible = (Helper.HasFeature(Enums.Features.Plugins));
             _localCameraToolStripMenuItem.Visible = (Helper.HasFeature(Enums.Features.Source_Local));
             _iPCameraToolStripMenuItem.Visible =
                 iPCameraWithWizardToolStripMenuItem.Visible =
@@ -1730,9 +1730,9 @@ namespace iSpyApplication
             if (!Helper.HasFeature(Enums.Features.Access_Media))
                 splitContainer1.Panel2Collapsed = true;
 
-            menuItem13.Visible =
-                _menuItem26.Visible =
-                    tsslPerformance.Visible = tsslPRO.Visible = Helper.HasFeature(Enums.Features.View_Ispy_Links);
+            //menuItem13.Visible =
+            //    _menuItem26.Visible =
+             //       tsslPerformance.Visible = tsslPRO.Visible = Helper.HasFeature(Enums.Features.View_Ispy_Links);
 
             statusStrip1.Visible = Conf.ShowStatus && Helper.HasFeature(Enums.Features.View_Status_Bar);
             menuItem38.Visible = menuItem15.Visible = Helper.HasFeature(Enums.Features.View_Layout_Options);
@@ -1742,7 +1742,7 @@ namespace iSpyApplication
 
             menuItem31.Text = LocRm.GetString("Gps");
             menuItem32.Text = LocRm.GetString("Manage");
-            menuItem36.Text = LocRm.GetString("ImportObjects");
+            //menuItem36.Text = LocRm.GetString("ImportObjects");
             tagsToolStripMenuItem.Text = LocRm.GetString("Tags");
             ShowHideMediaPane();
             mediaPanelControl1.RenderResources();
@@ -4542,12 +4542,12 @@ namespace iSpyApplication
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.mainMenu = new System.Windows.Forms.MainMenu(this.components);
             this._fileItem = new System.Windows.Forms.MenuItem();
-            this._menuItem19 = new System.Windows.Forms.MenuItem();
-            this._menuItem21 = new System.Windows.Forms.MenuItem();
-            this.menuItem36 = new System.Windows.Forms.MenuItem();
+     //       this._menuItem19 = new System.Windows.Forms.MenuItem();
+     //       this._menuItem21 = new System.Windows.Forms.MenuItem();
+     //       this.menuItem36 = new System.Windows.Forms.MenuItem();
             this.menuItem28 = new System.Windows.Forms.MenuItem();
-            this._menuItem1 = new System.Windows.Forms.MenuItem();
-            this.menuItem13 = new System.Windows.Forms.MenuItem();
+    //        this._menuItem1 = new System.Windows.Forms.MenuItem();
+    //        this.menuItem13 = new System.Windows.Forms.MenuItem();
             this.menuItem33 = new System.Windows.Forms.MenuItem();
             this._exitFileItem = new System.Windows.Forms.MenuItem();
             this._menuItem36 = new System.Windows.Forms.MenuItem();
@@ -4675,16 +4675,16 @@ namespace iSpyApplication
             this.tssbGridViews = new System.Windows.Forms.ToolStripDropDownButton();
             this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._toolStripButton8 = new System.Windows.Forms.ToolStripButton();
-            this._toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.tsbPlugins = new System.Windows.Forms.ToolStripButton();
+       //     this._toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+      //      this.tsbPlugins = new System.Windows.Forms.ToolStripButton();
             this._toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.ctxtMnu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pluginCommandsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configurePluginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openWebInterfaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this._viewMediaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this._viewMediaOnAMobileDeviceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+         //   this.openWebInterfaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+         //   this._viewMediaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+        //    this._viewMediaOnAMobileDeviceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.switchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.onToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.offToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -4770,54 +4770,55 @@ namespace iSpyApplication
             // 
             this.mainMenu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this._fileItem,
-            this._menuItem36,
+           // this._menuItem36,
             this._menuItem16,
             this._menuItem9,
-            this._helpItem});
+            //this._helpItem
+            });
             // 
             // _fileItem
             // 
             this._fileItem.Index = 0;
             this._fileItem.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this._menuItem19,
-            this._menuItem21,
-            this.menuItem36,
-            this.menuItem28,
-            this._menuItem1,
-            this.menuItem13,
+          //  this._menuItem19,
+          //  this._menuItem21,
+         //   this.menuItem36,
+              this.menuItem28,
+         //   this._menuItem1,
+        //    this.menuItem13,
             this.menuItem33,
             this._exitFileItem});
             this._fileItem.Text = "&File";
             // 
-            // _menuItem19
-            // 
-            this._menuItem19.Index = 0;
-            this._menuItem19.Text = "&Save Object List";
-            this._menuItem19.Click += new System.EventHandler(this.MenuItem19Click);
-            // 
-            // _menuItem21
-            // 
-            this._menuItem21.Index = 1;
-            this._menuItem21.Text = "&Open Object List";
-            this._menuItem21.Click += new System.EventHandler(this.MenuItem21Click);
-            // 
-            // menuItem36
-            // 
-            this.menuItem36.Index = 2;
-            this.menuItem36.Text = "Import Objects";
-            this.menuItem36.Click += new System.EventHandler(this.menuItem36_Click);
-            // 
+            //// _menuItem19
+            //// 
+            //this._menuItem19.Index = 0;
+            //this._menuItem19.Text = "&Save Object List";
+            //this._menuItem19.Click += new System.EventHandler(this.MenuItem19Click);
+            //// 
+            //// _menuItem21
+            //// 
+            //this._menuItem21.Index = 1;
+            //this._menuItem21.Text = "&Open Object List";
+            //this._menuItem21.Click += new System.EventHandler(this.MenuItem21Click);
+            //// 
+            //// menuItem36
+            //// 
+            //this.menuItem36.Index = 2;
+            //this.menuItem36.Text = "Import Objects";
+            //this.menuItem36.Click += new System.EventHandler(this.menuItem36_Click);
+            //// 
             // menuItem28
             // 
-            this.menuItem28.Index = 3;
+            this.menuItem28.Index = 0;
             this.menuItem28.Text = "Remove All Objects";
             this.menuItem28.Click += new System.EventHandler(this.menuItem28_Click);
             // 
-            // _menuItem1
-            // 
-            this._menuItem1.Index = 4;
-            this._menuItem1.Text = "-";
-            // 
+            //// _menuItem1
+            //// 
+            //this._menuItem1.Index = 4;
+            //this._menuItem1.Text = "-";
+            //// 
             // menuItem13
             /* 
             this.menuItem13.Index = 5;
@@ -4826,13 +4827,13 @@ namespace iSpyApplication
             */ 
             // menuItem33
             // 
-            this.menuItem33.Index = 6;
+            this.menuItem33.Index = 1;
             this.menuItem33.Text = "Lock";
             this.menuItem33.Click += new System.EventHandler(this.menuItem33_Click);
             // 
             // _exitFileItem
             // 
-            this._exitFileItem.Index = 7;
+            this._exitFileItem.Index = 2;
             this._exitFileItem.Text = "E&xit";
             this._exitFileItem.Click += new System.EventHandler(this.ExitFileItemClick);
             // 
@@ -4858,12 +4859,12 @@ namespace iSpyApplication
             // 
             // _menuItem16
             // 
-            this._menuItem16.Index = 2;
+            this._menuItem16.Index = 1;
             this._menuItem16.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this._menuItem17,
-            this._menuItem3,
-            this._menuItem25,
-            this.menuItem9,
+        //    this._menuItem3,
+        //    this._menuItem25,
+        //    this.menuItem9,
             this.menuItem34,
             this._menuItem13,
             this.menuItem38,
@@ -4879,8 +4880,8 @@ namespace iSpyApplication
             this.menuItem7,
             this.menuItem31,
             this.menuItem23,
-            this.menuItem14,
-            this.menuItem18,
+         //   this.menuItem14,
+         //   this.menuItem18,
             this.menuItem24,
             this.menuItem8});
             this._menuItem16.Text = "&View";
@@ -4954,7 +4955,7 @@ namespace iSpyApplication
             // 
             // menuItem34
             // 
-            this.menuItem34.Index = 4;
+            this.menuItem34.Index = 1;
             this.menuItem34.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuItem35});
             this.menuItem34.Text = "Window";
@@ -4967,12 +4968,12 @@ namespace iSpyApplication
             // 
             // _menuItem13
             // 
-            this._menuItem13.Index = 5;
+            this._menuItem13.Index = 2;
             this._menuItem13.Text = "-";
             // 
             // menuItem38
             // 
-            this.menuItem38.Index = 6;
+            this.menuItem38.Index = 3;
             this.menuItem38.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuItem39,
             this._menuItem39,
@@ -5072,7 +5073,7 @@ namespace iSpyApplication
             // 
             // menuItem15
             // 
-            this.menuItem15.Index = 7;
+            this.menuItem15.Index = 4;
             this.menuItem15.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuItem16,
             this.menuItem17,
@@ -5099,59 +5100,59 @@ namespace iSpyApplication
             // 
             // menuItem20
             // 
-            this.menuItem20.Index = 8;
+            this.menuItem20.Index = 5;
             this.menuItem20.Text = "-";
             // 
             // _menuItem20
             // 
-            this._menuItem20.Index = 9;
+            this._menuItem20.Index = 6;
             this._menuItem20.Text = "Log &File";
             this._menuItem20.Click += new System.EventHandler(this.MenuItem20Click);
             // 
             // _menuItem22
             // 
-            this._menuItem22.Index = 10;
+            this._menuItem22.Index = 7;
             this._menuItem22.Text = "Log F&iles";
             this._menuItem22.Click += new System.EventHandler(this.MenuItem22Click1);
             // 
             // menuItem2
             // 
-            this.menuItem2.Index = 11;
+            this.menuItem2.Index = 8;
             this.menuItem2.Text = "-";
             // 
             // menuItem3
             // 
-            this.menuItem3.Index = 12;
+            this.menuItem3.Index = 9;
             this.menuItem3.Text = "&Full Screen";
             this.menuItem3.Click += new System.EventHandler(this.fullScreenToolStripMenuItem1_Click);
             // 
             // menuItem4
             // 
-            this.menuItem4.Index = 13;
+            this.menuItem4.Index = 10;
             this.menuItem4.Text = "Status Bar";
             this.menuItem4.Click += new System.EventHandler(this.statusBarToolStripMenuItem_Click);
             // 
             // menuItem5
             // 
-            this.menuItem5.Index = 14;
+            this.menuItem5.Index = 11;
             this.menuItem5.Text = "File Menu";
             this.menuItem5.Click += new System.EventHandler(this.fileMenuToolStripMenuItem_Click);
             // 
             // menuItem6
             // 
-            this.menuItem6.Index = 15;
+            this.menuItem6.Index = 12;
             this.menuItem6.Text = "Tool Bar";
             this.menuItem6.Click += new System.EventHandler(this.toolStripToolStripMenuItem_Click);
             // 
             // menuItem7
             // 
-            this.menuItem7.Index = 16;
+            this.menuItem7.Index = 13;
             this.menuItem7.Text = "Media Pane";
             this.menuItem7.Click += new System.EventHandler(this.mediaPaneToolStripMenuItem_Click);
             // 
             // menuItem31
             // 
-            this.menuItem31.Index = 17;
+            this.menuItem31.Index = 14;
             this.menuItem31.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuItem32});
             this.menuItem31.Text = "Gps";
@@ -5164,35 +5165,35 @@ namespace iSpyApplication
             // 
             // menuItem23
             // 
-            this.menuItem23.Index = 18;
+            this.menuItem23.Index = 15;
             this.menuItem23.Text = "-";
             // 
             // menuItem14
             // 
-            this.menuItem14.Index = 19;
-            this.menuItem14.Text = "Layout Controller";
-            this.menuItem14.Click += new System.EventHandler(this.menuItem14_Click);
-            // 
-            // menuItem18
-            // 
-            this.menuItem18.Index = 20;
-            this.menuItem18.Text = "PTZ Controller";
-            this.menuItem18.Click += new System.EventHandler(this.menuItem18_Click);
-            // 
+            //this.menuItem14.Index = 16;
+            //this.menuItem14.Text = "Layout Controller";
+            //this.menuItem14.Click += new System.EventHandler(this.menuItem14_Click);
+            //// 
+            //// menuItem18
+            //// 
+            //this.menuItem18.Index = 17;
+            //this.menuItem18.Text = "PTZ Controller";
+            //this.menuItem18.Click += new System.EventHandler(this.menuItem18_Click);
+            //// 
             // menuItem24
             // 
-            this.menuItem24.Index = 21;
+            this.menuItem24.Index = 16;
             this.menuItem24.Text = "-";
             // 
             // menuItem8
             // 
-            this.menuItem8.Index = 22;
+            this.menuItem8.Index = 17;
             this.menuItem8.Text = "Always on Top";
             this.menuItem8.Click += new System.EventHandler(this.alwaysOnTopToolStripMenuItem1_Click);
             // 
             // _menuItem9
             // 
-            this._menuItem9.Index = 3;
+            this._menuItem9.Index = 2;
             this._menuItem9.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this._menuItem18,
             this._menuItem8,
@@ -5203,11 +5204,12 @@ namespace iSpyApplication
             this._menuItem31,
             this._miApplySchedule,
             this.menuItem37,
-            this._menuItem32,
-            this._menuItem4,
-            this._menuItem35,
-            this.menuItem30,
-            this.menuItem25});
+            //this._menuItem32,
+            //this._menuItem4,
+            //this._menuItem35,
+            //this.menuItem30,
+            //this.menuItem25
+            });
             this._menuItem9.Text = "&Options";
             // 
             // _menuItem18
@@ -5294,10 +5296,10 @@ namespace iSpyApplication
             this.menuItem37.Click += new System.EventHandler(this.menuItem37_Click);
             // 
             // _menuItem32
-            // 
-            this._menuItem32.Index = 9;
-            this._menuItem32.Text = "-";
-            // 
+            //// 
+            //this._menuItem32.Index = 9;
+            //this._menuItem32.Text = "-";
+            //// 
             // _menuItem4
             /* 
             this._menuItem4.Index = 10;
@@ -5312,15 +5314,15 @@ namespace iSpyApplication
             */ 
             // menuItem30
             // 
-            this.menuItem30.Index = 12;
-            this.menuItem30.Text = "-";
-            // 
-            // menuItem25
-            // 
-            this.menuItem25.Index = 13;
-            this.menuItem25.Text = "Default &Device Manager";
-            this.menuItem25.Click += new System.EventHandler(this.menuItem25_Click);
-            // 
+            //this.menuItem30.Index = 12;
+            //this.menuItem30.Text = "-";
+            //// 
+            //// menuItem25
+            //// 
+            //this.menuItem25.Index = 13;
+            //this.menuItem25.Text = "Default &Device Manager";
+            //this.menuItem25.Click += new System.EventHandler(this.menuItem25_Click);
+            //// 
             // _helpItem
             // 
             this._helpItem.Index = 4;
@@ -5633,8 +5635,8 @@ namespace iSpyApplication
             this._toolStripDropDownButton1,
             this.tssbGridViews,
             this._toolStripButton8,
-            this._toolStripButton1,
-            this.tsbPlugins,
+        //    this._toolStripButton1,
+         //   this.tsbPlugins,
             this._toolStripButton4});
             this.toolStripMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.toolStripMenu.Location = new System.Drawing.Point(0, 0);
@@ -5748,8 +5750,8 @@ namespace iSpyApplication
             // _toolStripDropDownButton1
             // 
             this._toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this._thruWebsiteToolStripMenuItem,
-            this._onMobileDevicesToolStripMenuItem,
+          //  this._thruWebsiteToolStripMenuItem,
+         //   this._onMobileDevicesToolStripMenuItem,
             this.inExplorerToolStripMenuItem});
             this._toolStripDropDownButton1.Image = global::iSpyApplication.Properties.Resources.Video2;
             this._toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -5856,9 +5858,9 @@ namespace iSpyApplication
             this.ctxtMnu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.ctxtMnu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pluginCommandsToolStripMenuItem,
-            this.openWebInterfaceToolStripMenuItem,
-            this._viewMediaToolStripMenuItem,
-            this._viewMediaOnAMobileDeviceToolStripMenuItem,
+        //    this.openWebInterfaceToolStripMenuItem,
+       //     this._viewMediaToolStripMenuItem,
+         //   this._viewMediaOnAMobileDeviceToolStripMenuItem,
             this.switchToolStripMenuItem,
             this._recordNowToolStripMenuItem,
             this._takePhotoToolStripMenuItem,
@@ -7029,9 +7031,9 @@ namespace iSpyApplication
         private void ctxtMnu_Opening(object sender, CancelEventArgs e)
         {
             _deleteToolStripMenuItem.Visible = _editToolStripMenuItem.Visible = Helper.HasFeature(Enums.Features.Edit);
-            _viewMediaOnAMobileDeviceToolStripMenuItem.Visible =
-                _viewMediaToolStripMenuItem.Visible =
-                    _showFilesToolStripMenuItem.Visible = Helper.HasFeature(Enums.Features.Access_Media);
+        //    _viewMediaOnAMobileDeviceToolStripMenuItem.Visible =
+         //       _viewMediaToolStripMenuItem.Visible =
+           //         _showFilesToolStripMenuItem.Visible = Helper.HasFeature(Enums.Features.Access_Media);
             tagsToolStripMenuItem.Visible = Tags.Any();
         }
 
