@@ -3473,10 +3473,10 @@ namespace iSpyApplication
                     _listenToolStripMenuItem.Visible = false;
                     _recordNowToolStripMenuItem.Visible = false;
                     _takePhotoToolStripMenuItem.Visible = false;
-                    _viewMediaOnAMobileDeviceToolStripMenuItem.Visible = _viewMediaToolStripMenuItem.Visible = Helper.HasFeature(Enums.Features.Access_Media);
+                    //_viewMediaOnAMobileDeviceToolStripMenuItem.Visible = _viewMediaToolStripMenuItem.Visible = Helper.HasFeature(Enums.Features.Access_Media);
                     _applyScheduleToolStripMenuItem1.Visible = true;
                     _resetRecordingCounterToolStripMenuItem.Visible = true;
-                    openWebInterfaceToolStripMenuItem.Visible = cameraControl.SupportsWebInterface;
+                   // openWebInterfaceToolStripMenuItem.Visible = cameraControl.SupportsWebInterface;
                     _resetRecordingCounterToolStripMenuItem.Text =
                         $"{LocRm.GetString("ResetRecordingCounter")} ({cameraControl.Camobject.newrecordingcount})";
                     pTZToolStripMenuItem.Visible = false;
@@ -3678,11 +3678,11 @@ namespace iSpyApplication
                     ContextTarget = volumeControl;
                     pluginCommandsToolStripMenuItem.Visible = false;
                     _listenToolStripMenuItem.Visible = true;
-                    _takePhotoToolStripMenuItem.Visible = openWebInterfaceToolStripMenuItem.Visible = false;
+                    //_takePhotoToolStripMenuItem.Visible = openWebInterfaceToolStripMenuItem.Visible = false;
                     _resetRecordingCounterToolStripMenuItem.Visible = true;
                     _applyScheduleToolStripMenuItem1.Visible = true;
                     pTZToolStripMenuItem.Visible = false;
-                    _viewMediaOnAMobileDeviceToolStripMenuItem.Visible = _viewMediaToolStripMenuItem.Visible = Helper.HasFeature(Enums.Features.Access_Media);
+                   // _viewMediaOnAMobileDeviceToolStripMenuItem.Visible = _viewMediaToolStripMenuItem.Visible = Helper.HasFeature(Enums.Features.Access_Media);
                     _resetRecordingCounterToolStripMenuItem.Text =
                         $"{LocRm.GetString("ResetRecordingCounter")} ({volumeControl.Micobject.newrecordingcount})";
 
@@ -3793,7 +3793,7 @@ namespace iSpyApplication
                     _listenToolStripMenuItem.Visible = false;
                     _resetRecordingCounterToolStripMenuItem.Visible = false;
                     _recordNowToolStripMenuItem.Visible = false;
-                    _takePhotoToolStripMenuItem.Visible = openWebInterfaceToolStripMenuItem.Visible = false;
+                    //_takePhotoToolStripMenuItem.Visible = openWebInterfaceToolStripMenuItem.Visible = false;
                     _applyScheduleToolStripMenuItem1.Visible = false;
                     pTZToolStripMenuItem.Visible = false;
                     pTZScheduleOnToolStripMenuItem.Visible = pTZScheduleOffToolStripMenuItem.Visible = false;
