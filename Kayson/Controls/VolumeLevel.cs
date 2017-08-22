@@ -2230,7 +2230,7 @@ namespace iSpyApplication.Controls
             Alarm(sender, EventArgs.Empty);
         }
 
-        public static WaveFormat AudioStreamFormat = new WaveFormat(65536, 16, 1);
+        public static WaveFormat AudioStreamFormat = new WaveFormat(22050, 16, 1);
 
         public void AudioDeviceDataAvailable(object sender, DataAvailableEventArgs e)
         {
@@ -2242,7 +2242,7 @@ namespace iSpyApplication.Controls
             {
                 using (var helpStm = new WaveFormatConversionStream(AudioStreamFormat, ws))
                 {
-                    totBytes = helpStm.Read(_bResampled, 0, 65536);//65000 ..22050
+                    totBytes = helpStm.Read(_bResampled, 0, 22050);//65000 ..22050
                    
                 }
             }
